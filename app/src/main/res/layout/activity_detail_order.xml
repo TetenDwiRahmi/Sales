@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDongker"
+    android:orientation="vertical">
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorWhite"
+        tools:targetApi="lollipop">
+
+        <ImageView
+            android:id="@+id/imageBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/v_back" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Detail Riwayat"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="50dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorDongker"
+            android:textSize="18dp"
+            />
+    </Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/namaCostumerDO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Toko Customer"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/alamatCostumerDO"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namaCostumerDO"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Alamat Lengkap Customer"
+            android:textColor="@color/colorWhite"
+            android:textSize="10dp" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_list">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:padding="20dp" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_total"
+            >
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:text="Total Belanja"
+                android:textColor="@color/colorBlack"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalBelanja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTotal"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_horizontal"
+                android:text="Rp. 20.000.000"
+                android:paddingLeft="20dp"
+                android:textColor="@color/colorGreen"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnBelum"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:background="@drawable/ic_radius"
+                    android:text="@string/reject"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorWhite" />
+
+                <Button
+                    android:id="@+id/btnACC"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:textSize="12dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/poppins_bold"
+                    android:background="@drawable/ic_radius_hijau"
+                    android:text="@string/accept"
+                    android:textColor="@color/colorWhite"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

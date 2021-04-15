@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Email"
+                android:textColor="@color/colorBlack"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ic_textbox"
+                android:fontFamily="@font/poppins"
+                android:hint="Email"
+                android:paddingStart="10dp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGray2"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Password"
+                android:textColor="@color/colorBlack"
+                android:textSize="17dp" />
+
+            <EditText
+                android:id="@+id/editPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ic_textbox"
+                android:drawableEnd="@drawable/v_visibility_off"
+                android:fontFamily="@font/poppins"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:longClickable="false"
+                android:paddingStart="10dp"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorGray2"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_radius"
+            android:fontFamily="@font/poppins_bold"
+            android:text="LOGIN"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

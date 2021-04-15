@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="UseCompoundDrawables">
+
+    <RelativeLayout
+        android:id="@+id/layoutOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/txtID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="left"
+            android:paddingLeft="5dp"
+            android:text="ID Transaksi"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtID"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingLeft="5dp"
+            android:text="12042021ORD182350"
+            android:textColor="@color/colorGray2"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tglOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtID"
+            android:layout_toRightOf="@id/idOrder"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="right"
+            android:paddingRight="5dp"
+            android:text="20 - 05 - 2021"
+            android:textColor="@color/colorGray2"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/namaCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tglOrder"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="left"
+            android:paddingLeft="5dp"
+            android:text="Nama Customer"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namaCustomer"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/line_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/jumlahItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="8 Item"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/totalHarga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="end"
+                        android:paddingStart="10dp"
+                        android:text="Rp. 20.000"
+                        android:textColor="@color/colorGreen"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line_total"
+                    android:gravity="right"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/bentukPembayaran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="left"
+                        android:text="2 Minggu"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                         />
+                    <TextView
+                        android:id="@+id/statusACC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line_total"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center_horizontal"
+                        android:text="Accept"
+                        android:textColor="@color/colorGreen" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/context"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorGray" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="UseCompoundDrawables">
+
+    <LinearLayout
+        android:id="@+id/context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp">
+
+            <ImageView
+                android:id="@+id/imageItem"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_grey" />
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/namaBarang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="left"
+                    android:paddingStart="10dp"
+                    android:text="Meja Minimalis Dengan Rak Buku Lorem Ipsum Dolor Lorem"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/namaBarang"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/hargaBarang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingStart="10dp"
+                    android:text="Rp. 20.000"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgEdit"
+                    android:layout_width="24dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/v_edit" />
+
+                <TextView
+                    android:id="@+id/jmlBarang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="right"
+                    android:text="10"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/context"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorGray" />
+</RelativeLayout>
